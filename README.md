@@ -61,3 +61,4 @@ If you find this code useful, please cite:
   pages={5871-5878},
   keywords={Costs;Planning;Monte Carlo methods;Mathematical models;Optimal control;Vehicle dynamics;Trajectory;Motion and path planning;optimization and optimal control;collision avoidance;sampling-based MPC;MPPI},
   doi={10.1109/LRA.2024.3397083}}
+```
