@@ -1,0 +1,30 @@
+goal: [2.0, 0.0]
+initial_pose: [-2.0, 0.0, 1.57]
+device: "cpu"
+dt: 0.05
+steps: 200
+
+mppi: 
+  device: "cpu"
+  mppi_mode: "simple"  # halton-spline, simple
+  sampling_method: "halton"   # halton, random
+  num_samples: 2
+  horizon: 20                 # At least 12 for Halton Sampling
+  lambda_: 0.1
+  u_min: [-1.5]
+  u_max: [1.5]
+  noise_sigma: [[1.5, 0., 0.], [0., 1.5, 0.], [0., 0., 1.5]]
+  update_lambda: True
+  rollout_var_discount: 0.95
+  sample_null_action: False
+  sample_previous_plan: False
+  sample_other_priors: True
+  filter_u: True
+  eta_u_bound: 1.1
+  eta_l_bound: 1.0
+  seed_val: 0
+
+simulator:
+  urdf: "pointRobot.urdf"
+  mode: "vel"
+  render: True
